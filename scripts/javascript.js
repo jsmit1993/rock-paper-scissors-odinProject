@@ -25,3 +25,36 @@ getHumanChoice();
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(human, computer) {
+    if (human === "rock" & computer === "rock") {
+        return console.log("Tie, no points awardered")
+    } else if (human === "rock" & computer === "paper") {
+        computerScore++;
+        return console.log("Computer wins this one")
+    } else if (human === "rock" & computer === "scissors") {
+        humanScore++;
+        return console.log("You win this one")
+    } else if (human === "paper" & computer === "paper") {
+        return console.log("Tie, no points awardered")
+    } else if (human === "paper" & computer === "scissors") {
+        computerScore++;
+        return console.log("Computer wins this one")
+    } else if (human === "paper" & computer === "rock") {
+        humanScore++;
+        return console.log("You win this one")
+    } else if (human === "scissors" & computer === "scissors") {
+        return console.log("Tie, no points awardered")
+    } else if (human === "scissors" & computer === "rock") {
+        computerScore++;
+        return console.log("Computer wins this one")
+    } else if (human === "scissors" & computer === "paper") {
+        humanScore++;
+        return console.log("You win this one")
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
